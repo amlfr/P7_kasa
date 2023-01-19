@@ -8,11 +8,11 @@ const HeaderDiv = styled.header`
 
     img {
         width: 14.8%;
-        margin: 7% 0 0 7%;
+        margin: 7% 0 0 7%; // todo changer vertical margin
 
         @media ${responsiveBreakpoints.mobile} {
             width: 39%;
-            margin: 5% 0 0 5%;
+            margin: 5.5% 0 0 5.5%;
         }
     }
 
@@ -30,8 +30,8 @@ const HeaderDiv = styled.header`
             margin: 0 10px;
 
             @media ${responsiveBreakpoints.mobile} {
-                font-size: 0.95rem;
-                margin: 0 3px 0 0;
+                font-size: 0.85rem;
+                margin: 0 10px 0 0;
             }
         }
     }

@@ -1,7 +1,9 @@
+import ErrorContainer from "../components/Error/index";
+
 const Error = () => {
     return (
         <main>
-            <h1>Error page</h1>
+            <ErrorContainer />
         </main>
     );
 };
