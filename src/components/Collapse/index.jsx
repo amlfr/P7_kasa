@@ -1,21 +1,61 @@
 import React, { useState } from "react";
-import { CollapseAnchor, CollapseBody, StyledSvg } from "./style";
+import { CollapseAnchor, CollapseBody, StyledSvg, CollapseDiv } from "./style";
 import arrow from "../../assets/images/arrow.svg";
 
-const Collapse = (props) => {
+const Collapse = ({ className, ...props }) => {
     const [toggle, setToggle] = useState(false);
+    let createList = [];
+
+    if (typeof props.content === "object") {
+        createList = props.content.map((equipment, index) => {
+            return <p key={index}>{equipment}</p>;
+        });
+        console.log("createList", createList);
+    }
 
     return (
-        <React.Fragment>
+        <CollapseDiv className={className}>
             <CollapseAnchor onClick={() => setToggle((toggle) => !toggle)}>
                 <h2>{props.header}</h2>
                 <StyledSvg src={arrow} alt="Flèche du menu" isToggle={toggle} />
             </CollapseAnchor>
             <CollapseBody isToggle={toggle}>
-                <p>{props.content}</p>
+                {props.isList ? createList : <p>{props.content}</p>}
             </CollapseBody>
-        </React.Fragment>
+        </CollapseDiv>
     );
+
+    /* if (typeof props.content === "string") {
+        return (
+            <CollapseDiv className={className}>
+                <CollapseAnchor onClick={() => setToggle((toggle) => !toggle)}>
+                    <h2>{props.header}</h2>
+                    <StyledSvg
+                        src={arrow}
+                        alt="Flèche du menu"
+                        isToggle={toggle}
+                    />
+                </CollapseAnchor>
+                <CollapseBody isToggle={toggle}>
+                    <p>{props.content}</p>
+                </CollapseBody>
+            </CollapseDiv>
+        );
+    } else {
+        return (
+            <CollapseDiv className={className}>
+                <CollapseAnchor onClick={() => setToggle((toggle) => !toggle)}>
+                    <h2>{props.header}</h2>
+                    <StyledSvg
+                        src={arrow}
+                        alt="Flèche du menu"
+                        isToggle={toggle}
+                    />
+                </CollapseAnchor>
+                <CollapseBody isToggle={toggle}>{createList}</CollapseBody>
+            </CollapseDiv>
+        );
+    } */
 };
 
 export default Collapse;

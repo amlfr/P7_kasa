@@ -15,8 +15,7 @@ import About from "./pages/About";
 import Housing from "./pages/Housing";
 import Error from "./pages/Error";
 
-/* Importing components */
-
+/* Importing footer component */
 import Header from "./components/Header/index";
 import Footer from "./components/Footer/index";
 

@@ -4,7 +4,6 @@ import { responsiveBreakpoints, primaryColor, lightGrey } from "../utils";
 export const CollapseAnchor = styled.div`
     background: ${primaryColor};
     height: 3rem;
-    width: 82.5%;
     cursor: pointer;
     border-radius: 5px;
     display: flex;
@@ -27,9 +26,8 @@ export const CollapseAnchor = styled.div`
 `;
 
 export const CollapseBody = styled.div`
-    width: 82.5%;
     background-color: ${lightGrey};
-    max-height: ${(props) => (props.isToggle ? "210px" : "0px")};
+    max-height: ${(props) => (props.isToggle ? "240px" : "0px")};
     transition: all 0.4s ease-out;
     margin: 0 0 2rem 0;
     border-radius: 5px;
@@ -62,5 +60,13 @@ export const StyledSvg = styled.img`
 
     @media ${responsiveBreakpoints.mobile} {
         width: 1rem;
+    }
+`;
+
+export const CollapseDiv = styled.div`
+    width: 82.5%;
+
+    @media ${responsiveBreakpoints.mobile} {
+        width: 100%;
     }
 `;

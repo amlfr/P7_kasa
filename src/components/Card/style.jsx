@@ -10,8 +10,17 @@ const CardDiv = styled.div`
     height: 100%;
     padding: 20px;
 
+    //
+    //
+    //
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
     @media ${responsiveBreakpoints.mobile} {
         /* aspect-ratio: 1.31 / 1; */
+        gap: 0px;
+        padding: 20px 20px 15px 20px;
     }
 
     &::after {
@@ -42,21 +51,30 @@ const CardDiv = styled.div`
         object-fit: cover;
         border: 1px solid #000000;
 
+        //
+        flex-shrink: 0;
+
         @media ${responsiveBreakpoints.mobile} {
             height: 80%;
         }
     }
 
-    h2 {
-        font-size: 1.1rem;
-        color: white;
-        position: relative;
-        z-index: 2;
-        width: 90%;
-        line-height: 1.5;
+    div {
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
 
-        @media ${responsiveBreakpoints.mobile} {
-            padding: 5px 0 0 0;
+        h2 {
+            font-size: 1.1rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            line-height: 1.5;
+
+            @media ${responsiveBreakpoints.mobile} {
+                padding: 0 0 0 0;
+            }
         }
     }
 `;

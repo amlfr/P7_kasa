@@ -4,7 +4,9 @@ const Card = (props) => {
     return (
         <CardDiv>
             <img src={props.cover} alt="Intérieur du logement" />
-            <h2>{props.title}</h2>
+            <div>
+                <h2>{props.title}</h2>
+            </div>
         </CardDiv>
     );
 };
