@@ -9,20 +9,16 @@ import { useState, useEffect } from "react";
 import { useRef } from "react";
 
 const Carousel = (props) => {
-    // Generates the img element inside the carousel from the object props
-    const pictures = props.pictures;
-    const createSlides = pictures.map((picture, index) => (
-        <img src={picture} alt="carousel slide" key={index} />
-    ));
-
     const [currentSlide, setCurrentSlide] = useState(0);
     const slidesList = useRef([]);
 
+    /* Assigns all images to an array when mounted */
     useEffect(() => {
         const slides = document.querySelectorAll("ul > img");
         slidesList.current = slides;
     }, []);
 
+    /* Makes the carousel move on each state change */
     useEffect(() => {
         const nextSlide = slidesList.current[currentSlide];
         nextSlide.scrollIntoView({
@@ -32,6 +28,7 @@ const Carousel = (props) => {
         });
     }, [currentSlide]);
 
+    /* Changes the state when user clicks */
     const handleLeftClick = () => {
         if (currentSlide > 0) {
             setCurrentSlide(currentSlide - 1);
@@ -47,6 +44,12 @@ const Carousel = (props) => {
             setCurrentSlide(0);
         }
     };
+
+    /* Generating img elements from the list of urls */
+    const pictures = props.pictures;
+    const createSlides = pictures.map((picture, index) => (
+        <img src={picture} alt="carousel slide" key={index} />
+    ));
 
     return (
         <CarouselSection>

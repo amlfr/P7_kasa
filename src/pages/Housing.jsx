@@ -2,15 +2,15 @@ import housings from "../assets/housing/housing.json";
 import Information from "../components/Information";
 import Carousel from "../components/Carousel";
 
-console.log(housings);
-
 const Housing = () => {
     const url = new URL(window.location.href);
     const housingId = url.searchParams.get("id");
-    console.log(housingId);
-    if (housings.find((housing) => housing.id === housingId) !== undefined) {
-        //TODO use includes au dessus pour + propre
+    const title = document.querySelector("title");
+
+    /* Iterating over the array of housing to find if the Id refers to one, redirects to 404 otherwise */
+    if (housings.some((housing) => housing.id === housingId)) {
         const housing = housings.find((housing) => housing.id === housingId);
+        title.innerHTML = "Kasa - " + housing.title;
         return (
             <main>
                 <Carousel pictures={housing.pictures} />

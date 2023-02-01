@@ -11,7 +11,6 @@ import {
 } from "./style";
 
 /* star rating svg  */
-
 const StarSvg = () => {
     return (
         <svg
@@ -37,12 +36,10 @@ const StarSvg = () => {
 };
 
 const Information = (props) => {
-    /* Creating the tags from the object given as props */
+    /* Creating the tags from the object passed as props */
     const tags = props.tags;
     const createTags = tags.map((tag, index) => <p key={index}>{tag}</p>);
     console.log(props.tags);
-
-    /* Handling the creation of   */
 
     /* Replacing spaces in the host's names for correct layout regardless  */
 
@@ -89,7 +86,6 @@ const Information = (props) => {
                 <InformationCollapse
                     header="Équipements"
                     content={props.equipments}
-                    isList={true}
                 />
             </CollapseContainer>
         </InformationSection>

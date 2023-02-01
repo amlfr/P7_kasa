@@ -4,13 +4,13 @@ import arrow from "../../assets/images/arrow.svg";
 
 const Collapse = ({ className, ...props }) => {
     const [toggle, setToggle] = useState(false);
-    let createList = [];
 
+    /* Generates multiple p elements if the content is an array */
+    let createList = [];
     if (typeof props.content === "object") {
         createList = props.content.map((equipment, index) => {
             return <p key={index}>{equipment}</p>;
         });
-        console.log("createList", createList);
     }
 
     return (
@@ -20,7 +20,11 @@ const Collapse = ({ className, ...props }) => {
                 <StyledSvg src={arrow} alt="Flèche du menu" isToggle={toggle} />
             </CollapseAnchor>
             <CollapseBody isToggle={toggle}>
-                {props.isList ? createList : <p>{props.content}</p>}
+                {typeof props.content === "object" ? (
+                    createList
+                ) : (
+                    <p>{props.content}</p>
+                )}
             </CollapseBody>
         </CollapseDiv>
     );

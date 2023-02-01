@@ -6,19 +6,14 @@ const CardDiv = styled.div`
     background-color: ${primaryColor};
     position: relative;
     border-radius: 10px;
-    /* aspect-ratio: 1 / 1; */
     height: 100%;
     padding: 20px;
 
-    //
-    //
-    //
     display: flex;
     flex-direction: column;
     gap: 5px;
 
     @media ${responsiveBreakpoints.mobile} {
-        /* aspect-ratio: 1.31 / 1; */
         gap: 0px;
         padding: 20px 20px 15px 20px;
     }
@@ -50,8 +45,6 @@ const CardDiv = styled.div`
         border-radius: 5px 5px 0 0;
         object-fit: cover;
         border: 1px solid #000000;
-
-        //
         flex-shrink: 0;
 
         @media ${responsiveBreakpoints.mobile} {

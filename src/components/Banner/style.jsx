@@ -3,7 +3,6 @@ import { responsiveBreakpoints } from "../utils";
 
 const BannerDiv = styled.div`
     max-width: 100%;
-    /* height: 22vh; */
     aspect-ratio: 5.56 / 1;
     margin: 20px 0;
     display: flex;
@@ -15,9 +14,6 @@ const BannerDiv = styled.div`
     border-radius: 25px;
 
     @media ${responsiveBreakpoints.mobile} {
-        /* Rules for the aspect ratio depending on the location of banner */
-        /* aspect-ratio: ${(props) =>
-            props.homeBanner ? 3.02 / 1 : 1.51 / 1}; */
         aspect-ratio: 1.51 / 1;
         border-radius: 10px;
     }
@@ -37,8 +33,6 @@ const BannerDiv = styled.div`
 
         @media ${responsiveBreakpoints.mobile} {
             border-radius: 10px;
-            /* background-image: url(${(props) =>
-                props.homeBanner ? props.urlMobile : props.url}); */
             background-image: url(${(props) => props.urlMobile});
         }
     }

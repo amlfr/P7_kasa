@@ -3,9 +3,9 @@ import styled from "styled-components/macro";
 import { lightGrey, responsiveBreakpoints } from "../components/utils";
 import banner1 from "../assets/images/banner1.png";
 import banner1Mobile from "../assets/images/banner1_mobile.png";
-import housings from "../assets/housing/housing.json";
 import Card from "../components/Card/index";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+import { useEffect } from "react";
 
 const CardContainer = styled.div`
     background-color: ${lightGrey};
@@ -45,21 +45,22 @@ const HomeBanner = styled(Banner)`
         aspect-ratio: 3.02 / 1;
     }
 
-    /* &::after {
-        @media ${responsiveBreakpoints.mobile} {
-            background-image: url(${(props) => props.urlMobile});
-        }
-    } */
-
     p {
         color: white;
     }
 `;
 
 const Home = () => {
+    /* Changes document title when mounted */
+    useEffect(() => {
+        const title = document.querySelector("title");
+        title.innerHTML = "Kasa - Acceuil";
+    }, []);
+
+    /* Generating elements from the json containing housings' infromations */
+    const housings = useLoaderData();
     const createCards = housings.map((housing, index) => (
         <StyledLink to={`/housing?id=${housing.id}`} key={index}>
-            {/* `/housing?id=${housing.id}` works to link the right url */}
             <Card title={housing.title} cover={housing.cover} />
         </StyledLink>
     ));

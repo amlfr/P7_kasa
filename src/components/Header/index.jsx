@@ -5,10 +5,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 const Header = () => {
+    /* Assigning the pathname of the url to a state for use in styling, updates on url change */
     const location = useLocation();
     const [pathName, setPathName] = useState();
-    console.log("pathName", pathName);
-
     useEffect(() => {
         setPathName(window.location.pathname);
     }, [location]);
