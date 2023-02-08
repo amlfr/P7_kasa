@@ -39,9 +39,8 @@ const Information = (props) => {
     /* Creating the tags from the object passed as props */
     const tags = props.tags;
     const createTags = tags.map((tag, index) => <p key={index}>{tag}</p>);
-    console.log(props.tags);
 
-    /* Replacing spaces in the host's names for correct layout regardless  */
+    /* Converting a string name into an array for proper layout  */
 
     const name = props.hostName;
     const splitName = name.split(" ");

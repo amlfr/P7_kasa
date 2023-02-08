@@ -54,6 +54,8 @@ export const InformationDiv = styled.div`
 
         @media ${responsiveBreakpoints.mobile} {
             margin: 10px 0 0 0;
+            flex-wrap: wrap;
+            width: 300px;
         }
 
         p {
@@ -67,6 +69,7 @@ export const InformationDiv = styled.div`
                 font-size: 0.62rem;
                 padding: 4px 30px 4px 30px;
                 border-radius: 5px;
+                white-space: nowrap;
             }
         }
     }
@@ -169,6 +172,7 @@ export const CollapseContainer = styled.div`
 
 export const InformationCollapse = styled(Collapse)`
     width: 47%;
+    /* max-height: 280px; */
 
     @media ${responsiveBreakpoints.mobile} {
         width: 100%;

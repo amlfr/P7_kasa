@@ -27,7 +27,7 @@ export const CollapseAnchor = styled.div`
 
 export const CollapseBody = styled.div`
     background-color: ${lightGrey};
-    max-height: ${(props) => (props.isToggle ? "260px" : "0px")};
+    max-height: ${(props) => (props.isToggle ? "280px" : "0px")};
     transition: all 0.4s ease-out;
     margin: 0 0 2rem 0;
     border-radius: 5px;
