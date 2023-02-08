@@ -58,7 +58,7 @@ export const InformationDiv = styled.div`
             width: 300px;
         }
 
-        p {
+        /* p {
             background-color: ${primaryColor};
             color: white;
             padding: 4px 40px 4px 40px;
@@ -71,7 +71,7 @@ export const InformationDiv = styled.div`
                 border-radius: 5px;
                 white-space: nowrap;
             }
-        }
+        } */
     }
 `;
 

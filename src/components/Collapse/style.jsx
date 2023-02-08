@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import { responsiveBreakpoints, primaryColor, lightGrey } from "../utils";
 
+export const CollapseDiv = styled.div`
+    width: 82.5%;
+
+    @media ${responsiveBreakpoints.mobile} {
+        width: 100%;
+    }
+`;
+
 export const CollapseAnchor = styled.div`
     background: ${primaryColor};
     height: 3rem;
@@ -60,13 +68,5 @@ export const StyledSvg = styled.img`
 
     @media ${responsiveBreakpoints.mobile} {
         width: 1rem;
-    }
-`;
-
-export const CollapseDiv = styled.div`
-    width: 82.5%;
-
-    @media ${responsiveBreakpoints.mobile} {
-        width: 100%;
     }
 `;

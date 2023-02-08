@@ -9,6 +9,7 @@ import {
     HostDiv,
     RatingDiv,
 } from "./style";
+import Tag from "../Tag";
 
 /* star rating svg  */
 const StarSvg = () => {
@@ -38,7 +39,10 @@ const StarSvg = () => {
 const Information = (props) => {
     /* Creating the tags from the object passed as props */
     const tags = props.tags;
-    const createTags = tags.map((tag, index) => <p key={index}>{tag}</p>);
+    console.log(tags);
+    const createTags = tags.map((tag, index) => (
+        <Tag key={index} tagName={tag} />
+    ));
 
     /* Converting a string name into an array for proper layout  */
 
