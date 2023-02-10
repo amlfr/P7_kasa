@@ -39,7 +39,6 @@ const StarSvg = () => {
 const Information = (props) => {
     /* Creating the tags from the object passed as props */
     const tags = props.tags;
-    console.log(tags);
     const createTags = tags.map((tag, index) => (
         <Tag key={index} tagName={tag} />
     ));

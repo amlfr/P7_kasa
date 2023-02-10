@@ -1,8 +1,7 @@
 import banner2 from "../assets/images/banner2.png";
 import banner2Mobile from "../assets/images/banner2_mobile.png";
 import Banner from "../components/Banner/index";
-import Collapse from "../components/Collapse/index"; /* 
-import textContents from "../assets/page-text/about.json"; */
+import Collapse from "../components/Collapse/index";
 import styled from "styled-components";
 import { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";

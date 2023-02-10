@@ -57,21 +57,6 @@ export const InformationDiv = styled.div`
             flex-wrap: wrap;
             width: 300px;
         }
-
-        /* p {
-            background-color: ${primaryColor};
-            color: white;
-            padding: 4px 40px 4px 40px;
-            border-radius: 10px;
-            font-size: 0.875rem;
-
-            @media ${responsiveBreakpoints.mobile} {
-                font-size: 0.62rem;
-                padding: 4px 30px 4px 30px;
-                border-radius: 5px;
-                white-space: nowrap;
-            }
-        } */
     }
 `;
 
@@ -172,26 +157,18 @@ export const CollapseContainer = styled.div`
 
 export const InformationCollapse = styled(Collapse)`
     width: 47%;
-    /* max-height: 280px; */
 
     @media ${responsiveBreakpoints.mobile} {
         width: 100%;
     }
 
     div:nth-child(2) {
-        @media ${responsiveBreakpoints.mobile} {
-            /* padding: 25px 7px 1px 12px;  fidele figma*/
-            /* current 20 10 10 10 */
-        }
-
         p {
             margin: 0 10px 0 10px;
         }
 
         p:first-child {
             margin-top: 20px;
-            /* margin: 20px 7px 10px 12px; */
-            /* margin: 20px 7px 10px 12px; */
         }
 
         p:last-child {

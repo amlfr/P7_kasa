@@ -28,38 +28,6 @@ const Collapse = ({ className, ...props }) => {
             </CollapseBody>
         </CollapseDiv>
     );
-
-    /* if (typeof props.content === "string") {
-        return (
-            <CollapseDiv className={className}>
-                <CollapseAnchor onClick={() => setToggle((toggle) => !toggle)}>
-                    <h2>{props.header}</h2>
-                    <StyledSvg
-                        src={arrow}
-                        alt="Flèche du menu"
-                        isToggle={toggle}
-                    />
-                </CollapseAnchor>
-                <CollapseBody isToggle={toggle}>
-                    <p>{props.content}</p>
-                </CollapseBody>
-            </CollapseDiv>
-        );
-    } else {
-        return (
-            <CollapseDiv className={className}>
-                <CollapseAnchor onClick={() => setToggle((toggle) => !toggle)}>
-                    <h2>{props.header}</h2>
-                    <StyledSvg
-                        src={arrow}
-                        alt="Flèche du menu"
-                        isToggle={toggle}
-                    />
-                </CollapseAnchor>
-                <CollapseBody isToggle={toggle}>{createList}</CollapseBody>
-            </CollapseDiv>
-        );
-    } */
 };
 
 export default Collapse;

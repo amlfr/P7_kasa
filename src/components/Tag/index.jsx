@@ -1,8 +1,8 @@
 import React from "react";
 import { TagContainer } from "./style";
 
-const Tag = (...props) => {
-    <TagContainer key={props.key}>{props.tagName}</TagContainer>;
+const Tag = ({ key, tagName }) => {
+    return <TagContainer key={key}>{tagName}</TagContainer>;
 };
 
 export default Tag;

@@ -12,20 +12,33 @@ export const ErrorDiv = styled.div`
         font-size: 18rem;
         font-weight: 700;
         color: ${primaryColor};
-        margin: 10rem 0 0 0;
+        margin: 160px 0 0 0;
+
+        @media ${responsiveBreakpoints.mobile} {
+            font-size: 6rem;
+        }
     }
 
     p {
         font-size: 2.25rem;
         color: ${primaryColor};
-        margin: 4.1rem 0 11.4rem 0;
+        margin: 65px 0 182px 0;
+
+        @media ${responsiveBreakpoints.mobile} {
+            margin: 10px 58px 150px 58px;
+            font-size: 1.125rem;
+        }
     }
 
     a {
         color: ${primaryColor};
         font-size: 1.1rem;
         text-decoration: underline;
-        margin: 0 0 10rem 0;
+        margin: 0 0 160px 0;
+
+        @media ${responsiveBreakpoints.mobile} {
+            font-size: 0.875rem;
+        }
     }
 `;
 

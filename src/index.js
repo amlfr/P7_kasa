@@ -58,19 +58,3 @@ root.render(
         <RouterProvider router={router} />
     </React.StrictMode>
 );
-
-/* root.render(
-    <React.StrictMode>
-        <Router>
-            <GlobalStyle />
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/housing" element={<Housing />}></Route>
-                <Route path="/about" element={<About />}></Route>
-                <Route path="*" element={<Error />}></Route>
-            </Routes>
-            <Footer />
-        </Router>
-    </React.StrictMode>
-); */
