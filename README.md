@@ -12,12 +12,7 @@ Réalisation du front-end d'un site SPA a l'aide de react et react router a part
 ________________
 Visite du site:
 ----------------
-Cloner le repo
 
-Utiliser la commande `npm install` depuis le dossier racine
-
-Utiliser la commande `npm start` depuis le meme dossier
-
-Visiter l'adresse "http://localhost:3000/"
+Visiter l'adresse "https://p7-kasa-ten.vercel.app/about"
 
 ***************************
