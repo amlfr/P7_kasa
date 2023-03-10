@@ -13,6 +13,6 @@ ________________
 Visite du site:
 ----------------
 
-Visiter l'adresse "https://p7-kasa-ten.vercel.app/about"
+Visiter l'adresse "https://p7-kasa-ten.vercel.app"
 
 ***************************
